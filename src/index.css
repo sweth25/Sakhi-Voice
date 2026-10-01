@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Rozha One', 'Noto Sans Devanagari', serif;
+  }
+
+  /* Global WCAG accessible focus indicator */
+  :focus-visible {
+    outline: 3px solid #f59e0b !important;
+    outline-offset: 3px !important;
+  }
+}
+
+/* High Contrast & Low-Light Environment Mode Styles */
+.high-contrast {
+  --bg-primary: #09090b;
+  --bg-card: #18181b;
+  --text-primary: #ffffff;
+  --text-secondary: #e4e4e7;
+  --border-contrast: #fbbf24;
+}
+
+.high-contrast body,
+.high-contrast.app-root {
+  background-color: #09090b !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .high-contrast-card {
+  background-color: #18181b !important;
+  color: #ffffff !important;
+  border-color: #fbbf24 !important;
+  border-width: 2px !important;
+}
+
+.high-contrast .high-contrast-text-light {
+  color: #fef08a !important;
+}
+
+.high-contrast .high-contrast-border {
+  border-color: #fbbf24 !important;
+}
+
+/* Custom subtle scrollbar */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Print styles for Assistance Pass Slip */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-slip, #printable-slip * {
+    visibility: visible;
+  }
+  #printable-slip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white !important;
+    border: 1px solid #000;
+  }
+}

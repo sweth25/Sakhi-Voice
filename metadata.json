@@ -1,0 +1,6 @@
+{
+  "name": "Sakhi - Voice Navigator for Rural Women",
+  "description": "An empathetic, zero-barrier voice and visual assistant empowering first-time rural women users to independently discover, understand, and apply for government schemes in their own regional language.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
